@@ -21,7 +21,7 @@
             <p class="success"><?= htmlspecialchars($_GET['success']) ?></p>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/postLogin.php" onsubmit="return validateLoginForm()">
+        <form method="post" action="../controllers/post_login.php" onsubmit="return validateLoginForm()">
             <label for="email">Email:</label>
             <input type="email" name="email" id="email" required>
 

@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     if (empty($email) || empty($password)) {
-        header("Location: ../views/login.php?error=Please fill in all fields");
+        header("Location: ../pics/login.php?error=Please fill in all fields");
         exit();
     }
 
@@ -21,12 +21,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['first_name'] = $user['first_name'];
-            header("Location: ../views/userPhotos.php?id=" . $user['id']);
+            header("Location: ../pics/user.php?id=" . $user['id']);
             exit();
         }
     }
 
-    header("Location: ../views/login.php?error=Invalid email or password");
+    header("Location: ../pics/login.php?error=Invalid email or password");
     exit();
 }
 ?>

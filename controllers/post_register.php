@@ -10,12 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
 
     if (empty($first_name) || empty($last_name) || empty($email) || empty($password) || empty($confirm_password)) {
-        header("Location: ../views/register.php?error=Please fill in all fields");
+        header("Location: ../pics/register.php?error=Please fill in all fields");
         exit();
     }
 
     if ($password !== $confirm_password) {
-        header("Location: ../views/register.php?error=Passwords do not match");
+        header("Location: ../pics/register.php?error=Passwords do not match");
         exit();
     }
 
@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $check_result = $check_stmt->get_result();
 
     if ($check_result->num_rows > 0) {
-        header("Location: ../views/register.php?error=Email already exists");
+        header("Location: ../pics/register.php?error=Email already exists");
         exit();
     }
 
@@ -37,10 +37,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("ssss", $first_name, $last_name, $email, $hashed_password);
 
     if ($stmt->execute()) {
-        header("Location: ../views/login.php?success=Registration successful. Please log in.");
+        header("Location: ../pics/login.php?success=Registration successful. Please log in.");
         exit();
     } else {
-        header("Location: ../views/register.php?error=Registration failed");
+        header("Location: ../pics/register.php?error=Registration failed");
         exit();
     }
 }

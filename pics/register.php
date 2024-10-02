@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="../css/styles.css">
+    <script src="../js/validation.js"></script>
 </head>
 <body>
     <header>
@@ -28,7 +29,7 @@
             <p style="color: green;"><?= htmlspecialchars($_GET['success']) ?></p>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/postRegister.php">
+        <form method="post" action="../controllers/post_register.php">
             <label for="first_name">First Name:</label>
             <input type="text" name="first_name" id="first_name" required><br>
 

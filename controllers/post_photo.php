@@ -3,7 +3,7 @@ session_start();
 require_once 'db.php';
 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../views/login.php");
+    header("Location: ../pics/login.php");
     exit();
 }
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $stmt->bind_param("is", $user_id, $fileName);
 
                 if ($stmt->execute()) {
-                    header("Location: ../views/userPhotos.php?id=$user_id");
+                    header("Location: ../pics/user.php?id=$user_id");
                     exit();
                 } else {
                     $error = "Failed to add photo to database.";
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     if (isset($error)) {
-        header("Location: ../views/photoUpload.php?error=" . urlencode($error));
+        header("Location: ../pics/photo.php?error=" . urlencode($error));
         exit();
     }
 }

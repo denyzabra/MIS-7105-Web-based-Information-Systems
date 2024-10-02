@@ -9,7 +9,7 @@ if ($path === '/users' || $path === '/') {
 } 
 elseif (preg_match('/^\/pics\/user\/(\d+)$/', $path, $matches)) {
     $user_id = $matches[1];
-    header("Location: /views/userPhotos.php?id=$user_id");
+    header("Location: /pics/user.php?id=$user_id");
     exit();
 } 
 else {
@@ -20,6 +20,6 @@ function displayAllUsers($conn) {
     $query = "SELECT id, first_name, last_name FROM users";
     $result = $conn->query($query);
     $users = $result->fetch_all(MYSQLI_ASSOC);
-    include 'views/allUsers.php';
+    include 'pics/user.php';
 }
 ?>

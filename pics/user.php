@@ -24,7 +24,7 @@
         <h1>Photos by <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?></h1>
 
         <?php if (isset($_SESSION['user_id']) && $_SESSION['user_id'] == $user_id): ?>
-            <a href="photoUpload.php" class="btn">Upload New Photo</a>
+            <a href="photo.php" class="btn">Upload New Photo</a>
         <?php endif; ?>
 
         <?php
@@ -57,12 +57,12 @@
                 ?>
                     <div class="comment">
                         <p><?= htmlspecialchars($comment['text']) ?></p>
-                        <p>By <a href="userPhotos.php?id=<?= htmlspecialchars($comment['user_id']) ?>"><?= htmlspecialchars($comment['first_name'] . ' ' . $comment['last_name']) ?></a></p>
+                        <p>By <a href="user.php?id=<?= htmlspecialchars($comment['user_id']) ?>"><?= htmlspecialchars($comment['first_name'] . ' ' . $comment['last_name']) ?></a></p>
                         <p>On <?= htmlspecialchars($comment['created_at']) ?></p>
                     </div>
                 <?php endwhile; ?>
 
-                <a href="commentForm.php?id=<?= htmlspecialchars($photo['id']) ?>" class="btn">Add Comment</a>
+                <a href="comment.php?id=<?= htmlspecialchars($photo['id']) ?>" class="btn">Add Comment</a>
             </div>
         <?php
             endwhile;

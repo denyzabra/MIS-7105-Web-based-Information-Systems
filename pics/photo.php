@@ -11,13 +11,13 @@
     <?php include 'header.php'; ?>
 
     <main>
-        <h1>Upload New Photo</h1>
+        <h1>New Photo</h1>
 
         <?php if (isset($_GET['error'])): ?>
             <p class="error"><?= htmlspecialchars($_GET['error']) ?></p>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/postPhoto.php" enctype="multipart/form-data" onsubmit="return validatePhotoForm()">
+        <form method="post" action="../controllers/post_photo.php" enctype="multipart/form-data" onsubmit="return validatePhotoForm()">
             <label for="photo">Choose a photo:</label>
             <input type="file" name="photo" id="photo" required accept="image/*">
 

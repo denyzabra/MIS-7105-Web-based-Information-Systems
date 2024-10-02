@@ -29,7 +29,7 @@
             <p class="error"><?= htmlspecialchars($_GET['error']) ?></p>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/postComment.php?id=<?= $photo_id ?>" onsubmit="return validateCommentForm()">
+        <form method="post" action="../controllers/post_comment.php?id=<?= $photo_id ?>" onsubmit="return validateCommentForm()">
             <label for="text">Comment:</label>
             <textarea name="text" id="text" required></textarea>
 

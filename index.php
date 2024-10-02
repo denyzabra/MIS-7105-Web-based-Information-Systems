@@ -10,9 +10,9 @@
     <header>
         <nav>
             <ul>
-                <li><a href="views/allUsers.php">All Users</a></li>
-                <li><a href="views/login.php">Login</a></li>
-                <li><a href="views/register.php">Register</a></li>
+                <li><a href="pics/allUsers.php">All Users</a></li>
+                <li><a href="pics/login.php">Login</a></li>
+                <li><a href="pics/register.php">Register</a></li>
             </ul>
         </nav>
     </header>
@@ -21,7 +21,7 @@
         <section class="hero">
             <h1>Welcome to the Photo Sharing App</h1>
             <p>Share your memories, upload photos, and leave comments for friends.</p>
-            <a href="views/register.php" class="btn">Get Started</a>
+            <a href="pics/register.php" class="btn">Get Started</a>
         </section>
 
         <section class="features">

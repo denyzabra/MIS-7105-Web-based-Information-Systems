@@ -24,7 +24,7 @@
             <?php if ($total_users > 0): ?>
                 <?php foreach ($users as $user): ?>
                     <li>
-                        <a href="userPhotos.php?id=<?= htmlspecialchars($user['id']) ?>">
+                        <a href="user.php?id=<?= htmlspecialchars($user['id']) ?>">
                             <?= htmlspecialchars($user['first_name'] . ' ' . $user['last_name']) ?>
                         </a>
                     </li>
